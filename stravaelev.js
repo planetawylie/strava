@@ -948,3 +948,7 @@ CanvasRenderingContext2D.prototype.dashedLineTo = function (fromX, fromY, toX, t
 };
 
 stravaOnSteroids_LeTour.create();
+
+function getData() {
+	stravaOnSteriods.create();
+}
