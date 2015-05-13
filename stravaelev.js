@@ -1,18 +1,17 @@
+var matrix= [];
+var  lengthMultiplierLarge = 0.001;
+var  lengthMultiplierSmall = 1;
+var  lengthUnitLarge="km";
+var  lengthUnitSmall="m";
+var  segName='ride';
+var  sections = [];
+var loading = false;
+var segDistance = 1;
+var segCat = '';
+var segGrade= 0;
+var segElevGain = 0;
 
 function create() {
- lengthMultiplierLarge = 0.001;
- lengthMultiplierSmall = 1;
- lengthUnitLarge="km";
- lengthUnitSmall="m";
- segName='ride';
-
- sections = [];
-
-loading = false;
-segDistance = 1;
-segCat = '';
-segGrade= 0;
-segElevGain = 0;
  var li = jQuery('#giro');
  if(li) { li.remove(); }
  li = jQuery('.activity-charts .giro');
@@ -59,7 +58,8 @@ segElevGain = 0;
 		jQuery(li).removeClass('selected');
 		jQuery(chart).addClass('hidden').css('display','none');
 		});
-},
+}
+
 function redraw() {
     if (this.loading) return;
 
@@ -112,18 +112,16 @@ function redraw() {
     if (f > 0 && xStep > 0 && yStep > 0 && angle > 0) {
         this.drawGiro(data.data, f, vertMultiplier, xStep, yStep, FitGradient, angle);
     }
-},
-
-matrix: [],
+}
 
 function transform(x, y) {
     return { x: x * matrix[0] + y * matrix[2] + 1 * matrix[4], y: x * matrix[1] + y * matrix[3] + 1 * matrix[5] };
-},
+}
 
 function inverse_transform(x, y, angle) {
     var matrix = [1, Math.tan(angle), 0, 1, 0, 0]; /* Skew transform */
     return { x: x * matrix[0] + y * matrix[2] + 1 * matrix[4], y: x * matrix[1] + y * matrix[3] + 1 * matrix[5] };
-},
+}
 
 function drawGiro(data, xf, yf, xStep, yStep, FitGradient, angle) {
     var c = document.getElementById('stravaOnSteroids');
