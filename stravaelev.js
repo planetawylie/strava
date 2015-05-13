@@ -60,7 +60,7 @@ segElevGain = 0;
 		jQuery(chart).addClass('hidden').css('display','none');
 		});
 },
-redraw: function() {
+function redraw() {
     if (this.loading) return;
 
     var canvas = document.getElementById('stravaOnSteroids');
@@ -116,16 +116,16 @@ redraw: function() {
 
 matrix: [],
 
-transform: function(x, y) {
+function transform(x, y) {
     return { x: x * matrix[0] + y * matrix[2] + 1 * matrix[4], y: x * matrix[1] + y * matrix[3] + 1 * matrix[5] };
 },
 
-inverse_transform: function(x, y, angle) {
+function inverse_transform(x, y, angle) {
     var matrix = [1, Math.tan(angle), 0, 1, 0, 0]; /* Skew transform */
     return { x: x * matrix[0] + y * matrix[2] + 1 * matrix[4], y: x * matrix[1] + y * matrix[3] + 1 * matrix[5] };
 },
 
-drawGiro: function(data, xf, yf, xStep, yStep, FitGradient, angle) {
+function drawGiro(data, xf, yf, xStep, yStep, FitGradient, angle) {
     var c = document.getElementById('stravaOnSteroids');
     sections = [];
 
