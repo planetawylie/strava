@@ -1,18 +1,18 @@
 
 function create() {
- lengthMultiplierLarge : 0.001;
- lengthMultiplierSmall : 1;
- lengthUnitLarge:"km";
- lengthUnitSmall:"m";
- segName:'ride';
+ lengthMultiplierLarge = 0.001;
+ lengthMultiplierSmall = 1;
+ lengthUnitLarge="km";
+ lengthUnitSmall="m";
+ segName='ride';
 
- sections : [];
+ sections = [];
 
-loading : false;
-segDistance : 1;
-segCat : '';
-segGrade : 0;
-segElevGain : 0;
+loading = false;
+segDistance = 1;
+segCat = '';
+segGrade= 0;
+segElevGain = 0;
  var li = jQuery('#giro');
  if(li) { li.remove(); }
  li = jQuery('.activity-charts .giro');
