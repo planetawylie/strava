@@ -1,5 +1,5 @@
 
-create: function() {
+function create() {
  lengthMultiplierLarge : 0.001;
  lengthMultiplierSmall : 1;
  lengthUnitLarge:"km";
