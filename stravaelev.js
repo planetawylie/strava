@@ -483,7 +483,7 @@ drawGiro: function(data, xf, yf, xStep, yStep, FitGradient, angle) {
 }
 };
 
-stravaOnSteroids.create();
+//stravaOnSteroids.create();
 
 var stravaOnSteroids_LeTour = {
   lengthMultiplierLarge : 0.001,
@@ -947,7 +947,7 @@ CanvasRenderingContext2D.prototype.dashedLineTo = function (fromX, fromY, toX, t
   }
 };
 
-stravaOnSteroids_LeTour.create();
+//stravaOnSteroids_LeTour.create();
 
 function getData() {
 	stravaOnSteriods.create();
