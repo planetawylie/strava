@@ -24,7 +24,7 @@ create: function() {
  if(!li) {
   li = document.createElement('link');
 	li.id='giro-fonts';
-	li.href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700';
+	li.href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700';
 	li.rel='stylesheet';
 	li.type='text/css';
 	document.getElementsByTagName('head')[0].appendChild(li);
